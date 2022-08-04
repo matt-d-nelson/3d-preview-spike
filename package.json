@@ -1,15 +1,17 @@
 {
-  "name": "audio-upload-and-player",
+  "name": "3d-preview-spike",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cropperjs": "^1.5.12",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "5.0.1",
     "react-redux": "^7.2.2",
+    "react-scripts": "5.0.1",
     "redux": "^4.0.5"
   },
   "scripts": {
+    "client": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
