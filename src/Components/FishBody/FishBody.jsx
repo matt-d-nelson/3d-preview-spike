@@ -260,6 +260,40 @@ function FishBody(props) {
             ry="1.9247077"
             transform="scale(-1,1)"
           />
+
+          {/* -----------------------ANCHOR POINTS------------------------ */}
+          <ellipse
+            style={{ display: "inline", fill: "#000000", strokeWidth: "0" }}
+            id="path12149"
+            cx="6.7494907"
+            cy="7.7978988"
+            rx="1.645185"
+            ry="1.6483182"
+          />
+          <ellipse
+            style={{ display: "inline", fill: "#000000", strokeWidth: "0" }}
+            id="path12149-0"
+            cx="88.101768"
+            cy="7.8096986"
+            rx="1.645185"
+            ry="1.6483182"
+          />
+          <ellipse
+            style={{ display: "inline", fill: "#000000", strokeWidth: "0" }}
+            id="path12149-0-2"
+            cx="87.026619"
+            cy="122.68544"
+            rx="1.645185"
+            ry="1.6483182"
+          />
+          <ellipse
+            style={{ display: "inline", fill: "#000000", strokeWidth: "0" }}
+            id="path12149-0-2-3"
+            cx="7.965209"
+            cy="122.68907"
+            rx="1.645185"
+            ry="1.6483182"
+          />
         </g>
       </svg>
     </div>
