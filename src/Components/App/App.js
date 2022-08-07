@@ -9,6 +9,7 @@ function App() {
   );
   const [finColor, setFinColor] = useState("#FF0000");
   const [dorsalColor, setDorsalColor] = useState("#3C2210");
+  const [eyeColor, setEyeColor] = useState("#FFFF00");
 
   const handleBodyColorChange = (event) => {
     setBodyColor(event.target.value);
@@ -21,6 +22,10 @@ function App() {
 
   const handleDorsalColorChange = (event) => {
     setDorsalColor(event.target.value);
+  };
+
+  const handleEyeColorChange = (event) => {
+    setEyeColor(event.target.value);
   };
 
   return (
@@ -40,11 +45,15 @@ function App() {
         onChange={handleDorsalColorChange}
         value={dorsalColor}
       />
+      <br />
+      <p>eye</p>
+      <input type="color" onChange={handleEyeColorChange} value={eyeColor} />
       <FishBody
         bodyColor={bodyColor}
         bodyShadeColor={bodyShadeColor}
         finColor={finColor}
         dorsalColor={dorsalColor}
+        eyeColor={eyeColor}
       />
     </div>
   );
