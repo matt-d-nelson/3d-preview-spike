@@ -10,7 +10,73 @@ function FishBody(props) {
         id="svg535"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <defs></defs>
+        <defs>
+          {/* BODY SHADE LEFT GRADIENT */}
+          <radialGradient
+            id="bodyShadeGrad"
+            cx="100%"
+            cy="80%"
+            r="100%"
+            fx="100%"
+            fy="60%"
+          >
+            <stop
+              offset="20%"
+              stopColor={props.bodyShadeColor}
+              stopOpacity="1"
+            />
+            <stop
+              offset="100%"
+              stopColor={props.bodyShadeColor}
+              stopOpacity="0"
+            />
+          </radialGradient>
+          {/* BODY LEFT GRADIENT */}
+          <radialGradient
+            id="bodyGrad"
+            cx="80%"
+            cy="70%"
+            r="70%"
+            fx="100%"
+            fy="70%"
+          >
+            <stop offset="70%" stopColor={props.bodyColor} stopOpacity="1" />
+            {/* <stop offset="90%" stopColor={props.bodyColor} stopOpacity="0.9" /> */}
+            <stop
+              offset="100%"
+              stopColor={props.bodyShadeColor}
+              stopOpacity="1"
+            />
+          </radialGradient>
+          {/* FIN LEFT GRADIENT */}
+          <radialGradient
+            id="finGrad"
+            cx="80%"
+            cy="30%"
+            r="70%"
+            fx="100%"
+            fy="30%"
+          >
+            <stop offset="0%" stopColor={props.finColor} stopOpacity="0" />
+            <stop offset="90%" stopColor={props.finColor} stopOpacity="1" />
+          </radialGradient>
+          {/* DORSAL GRADIENT */}
+          <radialGradient
+            id="dorsalGrad"
+            cx="100%"
+            cy="70%"
+            r="70%"
+            fx="100%"
+            fy="40%"
+          >
+            <stop offset="0%" stopColor={props.dorsalColor} stopOpacity="1" />
+            <stop
+              offset="100%"
+              stopColor={props.dorsalColor}
+              stopOpacity="0.5"
+            />
+          </radialGradient>
+        </defs>
         <g id="layer1" style={{ display: "inline" }}>
           {/* BODY BACKGROUND LEFT*/}
           <path
@@ -26,7 +92,7 @@ function FishBody(props) {
           {/* FIN LEFT */}
           <path
             style={{
-              fill: props.finColor,
+              fill: "url(#finGrad)",
               stroke: "#000000",
               strokeWidth: "0",
             }}
@@ -36,27 +102,28 @@ function FishBody(props) {
           {/* BODY SHADE LEFT */}
           <path
             style={{
-              fill: props.bodyShadeColor,
+              fill: "url(#bodyShadeGrad)",
               stroke: "#000000",
               strokeWidth: "0",
             }}
-            d="m 48.392581,8.1658921 c 0,0 -5.913916,-0.3880497 -6.135655,-0.01509 C 29.926834,28.889599 34.581099,78.82638 34.581099,78.82638 l 14.008136,-0.003 z"
+            d="m 48.392581,8.1658921 c 0,0 -5.913916,-0.3880497 -6.135655,-0.01509 C 35.69168,36.019804 25.703264,60.580043 33.519154,74.426892 c 3.501649,6.20362 15.070081,4.396488 15.070081,4.396488 z"
             id="path1028"
           />
           {/* BODY FGRD LEFT */}
           <path
             style={{
+              //   fill: "url(#bodyGrad)",
               fill: props.bodyColor,
               stroke: "#000000",
               strokeWidth: "0",
             }}
-            d="m 48.565979,78.802991 -13.891334,0.11693 c 0,0 -3.614124,-13.362102 -1.449938,-27.922979 2.175277,-14.635512 8.291674,-22.20491 11.461924,-42.8834969 0.06266,-0.4087007 3.869532,0.03307 3.869532,0.03307 z"
+            d="m 48.565979,78.802991 c 0,0 -10.383663,1.572819 -14.043041,-3.827439 -3.111297,-4.591438 -3.462417,-9.417733 -1.298231,-23.97861 2.175277,-14.635512 8.291674,-22.20491 11.461924,-42.8834969 0.06266,-0.4087007 3.869532,0.03307 3.869532,0.03307 z"
             id="path1031"
           />
           {/* DORSAL LEFT */}
           <path
             style={{
-              fill: props.dorsalColor,
+              fill: "url(#dorsalGrad)",
               stroke: "#000000",
               strokeWidth: "0",
             }}
