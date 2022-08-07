@@ -1,13 +1,22 @@
-import ImageCropper from "../ImageCropper/ImageCropper";
-import test from "../../fatefullFindings.jpeg";
+import { useState } from "react";
+import FishBody from "../FishBody/FishBody";
 
 function App() {
+  const [bodyColor, setBodyColor] = useState("#000000");
+
+  const handleBodyColorChange = (event) => {
+    setBodyColor(event.target.value);
+  };
+
   return (
     <div>
       <header>
         <h1>React 🍎 </h1>
       </header>
-      <ImageCropper src={test} />
+      <p>body</p>
+      <input type="color" onChange={handleBodyColorChange} />
+      <br />
+      <FishBody fill={bodyColor} />
     </div>
   );
 }

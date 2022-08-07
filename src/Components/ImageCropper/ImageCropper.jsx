@@ -8,6 +8,18 @@ import { useState } from "react";
 function ImageCropper(props) {
   const [imageDestination, setImageDestination] = useState("");
 
+  const [uploadedImg, setUploadedImg] = useState("");
+
+  const onUploadChange = (event) => {
+    const image = event.target.files[0];
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      setUploadedImg(reader.result);
+    };
+    reader.readAsDataURL(image);
+    console.log(image);
+  };
   // create imageElement ref
   const imageElement = useRef();
 
@@ -25,8 +37,9 @@ function ImageCropper(props) {
 
   return (
     <div>
+      <input type="file" onChange={onUploadChange} />
       <div className="img-container">
-        <img ref={imageElement} src={props.src} alt="Source" />
+        <img ref={imageElement} src={uploadedImg} alt="Source" />
       </div>
       <img className="img-preview" src={imageDestination} alt="Destination" />
     </div>
