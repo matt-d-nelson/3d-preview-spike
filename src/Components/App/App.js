@@ -30,24 +30,30 @@ function App() {
 
   return (
     <div>
-      <header>
-        <h1>React 🍎 </h1>
-      </header>
-      <p>body</p>
-      <input type="color" onChange={handleBodyColorChange} value={bodyColor} />
-      <br />
-      <p>fins</p>
-      <input type="color" onChange={handleFinColorChange} value={finColor} />
-      <br />
-      <p>dorsal</p>
-      <input
-        type="color"
-        onChange={handleDorsalColorChange}
-        value={dorsalColor}
-      />
-      <br />
-      <p>eye</p>
-      <input type="color" onChange={handleEyeColorChange} value={eyeColor} />
+      <div style={{ float: "left", marginLeft: "300px" }}>
+        <header>
+          <h1>React 🍎 </h1>
+        </header>
+        <p>body</p>
+        <input
+          type="color"
+          onChange={handleBodyColorChange}
+          value={bodyColor}
+        />
+        <br />
+        <p>fins</p>
+        <input type="color" onChange={handleFinColorChange} value={finColor} />
+        <br />
+        <p>dorsal</p>
+        <input
+          type="color"
+          onChange={handleDorsalColorChange}
+          value={dorsalColor}
+        />
+        <br />
+        <p>eye</p>
+        <input type="color" onChange={handleEyeColorChange} value={eyeColor} />
+      </div>
       <FishBody
         bodyColor={bodyColor}
         bodyShadeColor={bodyShadeColor}
